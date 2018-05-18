@@ -1,3 +1,7 @@
 node {
-	checkout scm
+	filename = "C:/Users/amangal/.jenkins/workspace/PipelineDemo/node_details.txt";
+	println filename
+	git add filename
+	git commit -a -m "adding file" 
+	git push origin master
 }
