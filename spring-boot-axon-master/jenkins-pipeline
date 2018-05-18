@@ -1,4 +1,5 @@
 node {
 	def scmVars = checkout scm
 	println scmVars
+	git log
 }
