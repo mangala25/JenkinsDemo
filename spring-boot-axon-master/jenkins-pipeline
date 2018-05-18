@@ -1,7 +1,7 @@
 node {
 	def filename = 'C:/Users/amangal/.jenkins/workspace/PipelineDemo/node_details.txt'
 	println filename
-	def targetFile = new File(filename)
+	sh 	'touch' + filename
 	git add filename
 	git commit -a -m "adding file" 
 	git push origin master
