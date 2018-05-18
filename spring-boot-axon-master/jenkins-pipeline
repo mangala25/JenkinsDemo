@@ -3,6 +3,8 @@ stage('dev'){
 }
 stage('stag'){
 	node {
+		def workspace = pwd()
+		println workspace
 		def exists = fileExists 'spring-boot-axon-master/jenkins-pipeline'
 		println exists
 		if(exists){
