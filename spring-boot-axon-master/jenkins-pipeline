@@ -1,5 +1,5 @@
 node {
-	filename = 'C:/Users/amangal/.jenkins/workspace/PipelineDemo/node_details.txt'
+	def filename = 'C:/Users/amangal/.jenkins/workspace/PipelineDemo/node_details.txt'
 	println filename
 	targetFile = new File(filename)
 	git add filename
