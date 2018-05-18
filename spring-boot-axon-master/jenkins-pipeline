@@ -2,7 +2,7 @@ stage('dev'){
 	echo 'dev build runs'
 }
 stage('stag'){
-	node{
+	script{
 		if(fileExists 'spring-boot-axon-master/pom.xml'){
 			echo 'File found'
 		} else{
