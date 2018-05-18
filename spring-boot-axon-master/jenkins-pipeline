@@ -4,7 +4,7 @@ stage('dev'){
 stage('stag'){
 	node {
 		def exists = fileExists 'spring-boot-axon-master/pom.xml'
-		echo exists
+		//echo exists
 		if(fileExists(exists)){
 			echo 'File found'
 		} else{
