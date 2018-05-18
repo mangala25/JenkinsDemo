@@ -2,7 +2,9 @@ stage('dev'){
 	echo 'dev build runs'
 }
 stage('stag'){
-	fileExists 'spring-boot-axon-master/pom.xml'
+	node{
+		fileExists 'spring-boot-axon-master/pom.xml'
+	}
 }
 stage('pre-prod'){
 	echo 'pe-prod build runs'
