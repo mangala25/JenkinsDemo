@@ -1,27 +1,16 @@
-stage('dev'){
-	echo 'dev build runs'
+def handleCheckout = {
+	sh "echo 'Checking out given branch...'"
+	checkout scm
 }
-stage('stag'){
-	node {
-		def workspace = pwd()
-		println workspace
-		def exists = fileExists 'C:/Users/amangal/.jenkins/workspace/PipelineDemo/spring-boot-axon-master/jenkins-pipeline'
-		println exists
-		if(exists){
-			echo 'File found'
-		} else{
-			error 'File not found'
-		}
-		
-		/*git init 
-		git clone :https://github.com/mangala25/JenkinsDemo.git
-		git branch d1
-		git log*/
+
+node() {
+	stage('setup') {
+		sh "env | sort"
+		handleCheckout()
+		sh "git branch -vv"
 	}
-}
-stage('pre-prod'){
-	echo 'pe-prod build runs'
-}
-stage('prod'){
-	echo 'prod build runs'
+
+	stage('test') {
+		sh "echo 'Throw in some tests here'"
+	}
 }
