@@ -1,4 +1,4 @@
 node {
-	git branch --test
-	git push origin master
+	def commitHash = checkout(scm).GIT_COMMIT
+	println commitHash
 }
