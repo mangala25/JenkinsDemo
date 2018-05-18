@@ -1,8 +1,8 @@
 node {
 	def filename = 'C:/Users/amangal/.jenkins/workspace/PipelineDemo/node_details.txt'
 	println filename
-	targetFile = new File(filename)
+	/*targetFile = new File(filename)
 	git add filename
 	git commit -a -m "adding file" 
-	git push origin master
+	git push origin master*/
 }
