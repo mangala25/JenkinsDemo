@@ -5,7 +5,7 @@ stage('stag'){
 	node {
 		def workspace = pwd()
 		println workspace
-		def exists = fileExists 'PipelineDemo/spring-boot-axon-master/jenkins-pipeline'
+		def exists = fileExists 'C:/Users/amangal/.jenkins/workspace/PipelineDemo/spring-boot-axon-master/jenkins-pipeline'
 		println exists
 		if(exists){
 			echo 'File found'
