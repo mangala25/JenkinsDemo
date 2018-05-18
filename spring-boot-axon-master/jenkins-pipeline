@@ -2,13 +2,11 @@ stage('dev'){
 	echo 'dev build runs'
 }
 stage('stag'){
-	steps {
-		script{
-			if(fileExists('spring-boot-axon-master/pom.xml')){
-				echo 'File found'
-			} else{
-				error 'File not found'
-			}
+	script{
+		if(fileExists('spring-boot-axon-master/pom.xml')){
+			echo 'File found'
+		} else{
+			error 'File not found'
 		}
 	}
 }
