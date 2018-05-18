@@ -7,7 +7,7 @@ stage('stag'){
 	}
 }
 stage('pre-prod'){
-	echo 'pe-prod build runs'
+	error 'Build has been corupt'
 }
 stage('prod'){
 	echo 'prod build runs'
