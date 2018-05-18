@@ -4,7 +4,7 @@ stage('dev'){
 stage('stag'){
 	steps {
 		script{
-			if(fileExists 'spring-boot-axon-master/pom.xml'){
+			if(fileExists('spring-boot-axon-master/pom.xml')){
 				echo 'File found'
 			} else{
 				error 'File not found'
