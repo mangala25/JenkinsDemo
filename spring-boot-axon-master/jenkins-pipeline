@@ -3,7 +3,7 @@ stage('dev'){
 }
 stage('stag'){
 	node {
-		def exists = fileExists 'spring-boot-axon-master/pom.xml'
+		def exists = fileExists 'spring-boot-axon-master/jenkins-pipeline'
 		println exists
 		if(exists){
 			echo 'File found'
