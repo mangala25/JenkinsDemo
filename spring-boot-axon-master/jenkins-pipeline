@@ -3,11 +3,16 @@ stage('dev'){
 }
 stage('stag'){
 	node{
-		fileExists 'spring-boot-axon-master/pom.xml'
+		if(fileExists 'spring-boot-axon-master/pom.xml'){
+			echo 'File found'
+		} else{
+			error 'File not found'
+		}
+		
 	}
 }
 stage('pre-prod'){
-	error 'Build has been corupt'
+	echo 'pe-prod build runs'
 }
 stage('prod'){
 	echo 'prod build runs'
