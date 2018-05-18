@@ -3,13 +3,18 @@ stage('dev'){
 }
 stage('stag'){
 	node {
-		def exists = fileExists 'spring-boot-axon-master/pom.xml'
-		echo ${exists}
+		/*def exists = fileExists 'spring-boot-axon-master/pom.xml'
+		echo '${exists}'
 		if(exists){
 			echo 'File found'
 		} else{
 			error 'File not found'
-		}
+		}*/
+		
+		git init 
+		git clone https://github.com/mangala25/JenkinsDemo.git
+		git branch d1
+		git log
 	}
 }
 stage('pre-prod'){
