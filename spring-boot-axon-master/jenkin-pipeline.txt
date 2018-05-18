@@ -1,0 +1,12 @@
+stage('dev'){
+        echo 'dev build runs'
+    }
+stage('stag'){
+	echo 'stag buil runs'
+}
+stage('pre-prod'){
+	echo 'pe-prod build runs'
+}
+stage('prod'){
+	echo 'prod build runs'
+}
