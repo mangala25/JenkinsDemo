@@ -1,16 +1,3 @@
-def handleCheckout = {
-	sh "echo 'Checking out given branch...'"
+node {
 	checkout scm
-}
-
-node() {
-	stage('setup') {
-		sh "env | sort"
-		handleCheckout()
-		sh "git branch -vv"
-	}
-
-	stage('test') {
-		sh "echo 'Throw in some tests here'"
-	}
 }
