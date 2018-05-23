@@ -1,5 +1,15 @@
-node {
-	def scmVars = checkout scm
-	println scmVars
-	git log
+stage('clean') {
+    node {
+        bat "mvn clean"
+    }
+}
+stage('compile') {
+    node {
+        bat "mvn compile"
+    }
+}
+stage('test') {
+    node {
+        bat "mvn test"
+    }
 }
